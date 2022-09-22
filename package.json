@@ -1,0 +1,27 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/bot.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Corwin96/DiscordBot-js.git"
+  },
+  "keywords": [],
+  "author": "Corwin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Corwin96/DiscordBot-js/issues"
+  },
+  "homepage": "https://github.com/Corwin96/DiscordBot-js#readme",
+  "dependencies": {
+    "@discordjs/rest": "^1.0.0",
+    "chalk": "^4.1.2",
+    "discord-api-types": "^0.37.10",
+    "discord.js": "^14.4.0",
+    "dotenv": "^16.0.2"
+  }
+}
