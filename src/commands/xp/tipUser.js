@@ -7,16 +7,10 @@ module.exports = {
     .setName("tip")
     .setDescription("Tip xp to another user!")
     .addUserOption((option) =>
-      option
-        .setName("target")
-        .setDescription("User being tipped")
-        .setRequired(true)
+      option.setName("target").setDescription("User being tipped").setRequired(true)
     )
     .addIntegerOption((option) =>
-      option
-        .setName("amount")
-        .setDescription("The amount tipped")
-        .setRequired(true)
+      option.setName("amount").setDescription("The amount tipped").setRequired(true)
     ),
   async execute(interaction, client) {
     if (interaction.options.getInteger("amount") <= 0) {
