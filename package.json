@@ -19,10 +19,14 @@
   "homepage": "https://github.com/Corwin96/DiscordBot-js#readme",
   "dependencies": {
     "@discordjs/rest": "^1.0.0",
+    "@ethereumjs/common": "^3.0.0",
+    "@ethereumjs/tx": "^4.0.0",
     "chalk": "^4.1.2",
     "discord-api-types": "^0.37.10",
     "discord.js": "^14.4.0",
     "dotenv": "^16.0.2",
-    "mongoose": "^6.6.1"
+    "mongoose": "^6.6.1",
+    "web3": "^1.8.0",
+    "web3-eth-contract": "^1.8.0"
   }
 }

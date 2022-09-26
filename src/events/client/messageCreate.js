@@ -5,6 +5,7 @@ module.exports = {
   name: "messageCreate",
   async execute(message, client) {
     if (message.author.bot) return;
+    if (message.channel.type === 1) return;
     let userProfile = await User.findOne({ userID: message.author.id });
     const xpGained = Math.floor(Math.random() * (500 - 100) + 100);
     if (!userProfile) {
@@ -24,7 +25,6 @@ module.exports = {
       await message.reply({
         content: `You have been awarded ${xpGained} xp`,
       });
-      console.log(userProfile);
     }
   },
 };

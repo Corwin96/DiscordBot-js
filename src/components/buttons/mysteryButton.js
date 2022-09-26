@@ -4,7 +4,7 @@ module.exports = {
   },
   async execute(interaction, client) {
     await interaction.reply({
-      content: `You just purchased a mystery box!`,
+      content: `${interaction.user}, you just purchased a mystery box!`,
     });
   },
 };
