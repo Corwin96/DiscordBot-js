@@ -62,8 +62,6 @@ module.exports = {
           "target"
         )} ${interaction.options.getInteger("amount")} xp`,
       });
-      console.log(userProfile);
-      console.log(targetProfile);
     }
   },
 };
