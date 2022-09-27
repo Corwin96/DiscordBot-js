@@ -18,11 +18,11 @@ module.exports = {
 
       await userProfile.save().catch(console.error);
       await interaction.reply({
-        content: `User xp: ${userProfile.xp}`,
+        content: `User xp: ${userProfile.xp}\nMystery boxes: ${userProfile.mysteryBox}\nLast message: ${userProfile.lastUpdated}`,
       });
     } else {
       await interaction.reply({
-        content: `User xp: ${userProfile.xp}`,
+        content: `User xp: ${userProfile.xp}\nMystery boxes: ${userProfile.mysteryBox}\nLast message: ${userProfile.lastUpdated}`,
       });
       console.log(userProfile);
     }

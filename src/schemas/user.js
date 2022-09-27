@@ -5,6 +5,7 @@ const userSchema = new Schema({
   userID: { type: String },
   guildID: { type: String },
   xp: { type: Number, default: 0 },
+  mysteryBox: { type: Number, default: 0},
   messageCount: { type: Number, default: 0 },
   lastUpdated: { type: Date, default: new Date() },
 });

@@ -17,14 +17,8 @@ module.exports = {
       });
 
       await userProfile.save().catch(console.error);
-      await message.reply({
-        content: `You have been registered and awarded ${xpGained} xp`,
-      });
     } else {
       await client.increaseXp(userProfile, xpGained);
-      await message.reply({
-        content: `You have been awarded ${xpGained} xp`,
-      });
     }
   },
 };
