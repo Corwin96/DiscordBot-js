@@ -8,7 +8,6 @@ module.exports = {
     if (message.channel.type === 1) return;
     let userProfile = await User.findOne({ userID: message.author.id });
     const date = new Date();
-    if ((date - new Date(userProfile.lastUpdated)) < 60_000) return;
     const xpGained = Math.floor(Math.random() * (500 - 100) + 100);
     if (!userProfile) {
       userProfile = await new User({
@@ -21,6 +20,7 @@ module.exports = {
 
       await userProfile.save().catch(console.error);
     } else {
+      if ((date - new Date(userProfile.lastUpdated)) < 60_000) return;
       userProfile.messageCount++;
       userProfile.lastUpdated = date;
       await client.increaseXp(userProfile, xpGained);
