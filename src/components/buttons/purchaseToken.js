@@ -70,7 +70,7 @@ module.exports = {
         await interaction.user.send({
           content: `You just purchased a Titan token on address ${
             collected.first().content
-          }, you can find the transaction at the hash ${finalTx.transactionHash}!`,
+          }, you can find the transaction at the hash https://mumbai.polygonscan.com/tx/${finalTx.transactionHash}!`,
         });
       } catch {
         await interaction.user.send({
