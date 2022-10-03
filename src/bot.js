@@ -6,7 +6,7 @@ const { Client, Collection, GatewayIntentBits } = require("discord.js");
 const fs = require("fs");
 const handleComponents = require("./functions/handlers/handleComponents");
 
-const client = new Client({ intents: 32767 });
+const client = new Client({ intents: 32767, partials: ['USER', 'REACTION', 'MESSAGE'] });
 client.commands = new Collection();
 client.buttons = new Collection();
 client.commandArray = [];

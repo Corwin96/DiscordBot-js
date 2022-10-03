@@ -6,6 +6,7 @@ module.exports = {
   async execute(message, client) {
     if (message.author.bot) return;
     if (message.channel.type === 1) return;
+    if (message.channel.id === "968110570643554344") return;
     let userProfile = await User.findOne({ userID: message.author.id });
     const date = new Date();
     const xpGained = Math.floor(Math.random() * (500 - 100) + 100);
