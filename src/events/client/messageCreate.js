@@ -9,7 +9,7 @@ module.exports = {
     if (message.channel.id === "968110570643554344") return;
     let userProfile = await User.findOne({ userID: message.author.id });
     const date = new Date();
-    const xpGained = Math.floor(Math.random() * (500 - 100) + 100);
+    const xpGained = Math.floor(Math.random() * (25 - 5) + 5);
     if (!userProfile) {
       userProfile = await new User({
         _id: mongoose.Types.ObjectId(),
