@@ -46,7 +46,7 @@ module.exports = {
       const toAddress = collected.first().content;
       const txData = contract.methods.transfer(toAddress, BigInt(10 ** 18)).encodeABI();
       const txCount = await web3.eth.getTransactionCount(publicKey);
-      const common = Common.custom(CustomChain.PolygonMumbai);
+      const common = Common.custom(CustomChain.Polygon);
 
       const txObject = {
         nonce: web3.utils.toHex(txCount),
@@ -70,7 +70,7 @@ module.exports = {
         await interaction.user.send({
           content: `You just purchased a Titan token on address ${
             collected.first().content
-          }, you can find the transaction at the hash https://mumbai.polygonscan.com/tx/${finalTx.transactionHash}!`,
+          }, you can find the transaction at the hash https://polygonscan.com/tx/${finalTx.transactionHash}!`,
         });
       } catch {
         await interaction.user.send({

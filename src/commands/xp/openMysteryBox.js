@@ -21,7 +21,7 @@ module.exports = {
         content: `Congratulations ${interaction.user}, you won the jackpot of 500,000 xp!`,
       });
       userProfile.xp += 500_000;
-    } else if (randValue < 1_000) {
+    } else if (randValue < 10_000) {
       await interaction.reply({
         content: `Your mystery box suddenly explodes and nothing is left!`,
       });
